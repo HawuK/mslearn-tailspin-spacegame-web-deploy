@@ -106,7 +106,7 @@ stages:
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
 
-
+## Testin deploy
 - stage: 'Test'
   displayName: 'deployataan testiin'
   dependsOn: Dev
@@ -130,3 +130,4 @@ stages:
               azureSubscription: 'Resourse Manager - Tailspin - Space Game'
               appName: '$(WebAppNameTest)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+
